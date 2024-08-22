@@ -2,8 +2,8 @@ name: Monthly update full data
 
 on:
   schedule:
-    # Runs at every hour
-    - cron: '0 * * * *'
+    # Runs at every day at mid night
+    - cron: '0 0 * * *'
 
 jobs:
   monthly-update-full-data:
