@@ -2,8 +2,8 @@ name: Monthly update full data
 
 on:
   schedule:
-    # Runs at every 10 minute
-    - cron: '*/10 * * * *'
+    # Runs at every hour
+    - cron: '0 * * * *'
 
 jobs:
   monthly-update-full-data:
@@ -38,8 +38,8 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add tiprank/*
-          git commit -a -m "Add changes"
+          git add .
+          git commit -a -m "Update full data"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
